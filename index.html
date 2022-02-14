@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area del rectangulo</title>
+    <link rel="stylesheet" type="text/css" href="./src/animate.min.css">
+    <link rel="preload" href="styles.css" as="styles">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body onload="init()">
+    <div class="logo">
+        <img src="./assets/Img/logo.png" alt="logo: escuela nueva">
+    </div>
+    <div class="contendor-bienvenida">
+        <div class="contenido-actividad-bienvenida">
+            <div class="contenedor-actividad">
+                <div class="bienvenida">
+                    <div>
+                        <!-- <h1>Las máquinas han cambiado la historia de la humanidad</h1> -->
+                        <div class="buttonTitulo">
+                            <img src="./assets/img/titulo.png" class="responsive" alt="titulo">
+                        </div>
+                        <div>
+                            <div class="siguienteBtn">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="slider1">
+                    <div>
+                        <img src="./assets/img/TituloP.png" class="responsive" alt="">
+                    </div>
+                    <div>
+                        <p>El área de un rectángulo es el producto de la longitud de su base por su altura. La base y la
+                            altura han de expresarse en la misma unidad.</p>
+                        <p>Su fórmula seria <b>A</b> = </b>b*h</b></p>
+                        (<b>A</b> <span class="igual">=</span> <b>área</b> <b>b</b> <span class="igual">=</span>
+                        <b>base</b> <b>h</b> <span class="igual">=</span>
+                        <b>altura</b>)
+                    </div>
+                    <div>
+                        <img src="./assets/animaciones/index.gif" class="responsive" alt="">
+                    </div>
+                    <div>
+                        <div class="siguienteBtn">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="slider2">
+                    <div class="contenedor-titulo">
+                        <div class="tituloP1">
+                           <!--  <img src="./assets/img/TituloP.png" class="responsive" alt=""> -->
+                        </div>
+                        <div class="tituloP2">
+                            <div class="texto-tituloP2">
+                                El área de un rectángulo es el producto de la longitud de su
+                                base por su altura. La base y la altura han de expresarse en
+                                la misma unidad.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contenedor-ejemplo-actividad">
+                        <div class="container">
+                            <p><b>Ejercicios</b></p>
+                            <p>Digita la base y halla el Área</p>
+                            <div class="row">
+                                <div class="contendor-ejemplo-row">
+                                    <div>
+                                        <div>
+                                            <b>h</b> <span class="igual-white"> = </span>
+                                            <input type="text" name="" readonly id="numeroaltura" size="1" value="3">
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <b>b</b> <span class="igual-white"> = </span>
+                                            <input type="text" name="" id="numerobase" size="1" onfocus="this.value=''"
+                                                value="?">
+                                        </div>
+
+                                    </div>
+                                    <div class="contendor-ejemplo-row"
+                                        onclick="resaltarCuadros('#numeroaltura','#numerobase')">
+                                        <img src="./assets/img/flecha.png" alt="" style="cursor:pointer">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="contenedor-ejercicio-example">
+                                <div onclick="nuevoEjercicio()" style="cursor:pointer">
+                                    <img src="./assets/img/btnNuevoEjercicio.png" class="responsive" alt="">
+                                </div>
+                                <div class="contendor-figura-cadricula">
+                                    <div>
+                                        <b>h</b>
+                                    </div>
+                                    <div class="contenedor-padre-cuadricula">
+                                        <div class="contenedor-cuadricula">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div>
+                                    <b>b</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="opciones-actividad">
+                        <div class="recuadro-uno">
+                            <div class="paso-1">1</div>
+                            <div>
+                                A <span class="igual">=</span><b>b</b>.<b>h</b>
+                            </div>
+                        </div>
+                        <div class="recuadro-dos">
+                            <div class="paso-2">2</div>
+                            <div>
+                                A <span class="igual">=</span><b><input type="text" name="" size="1"
+                                    id="numerobaseReferencia"></b>.<b><input type="text" name="" size="1"
+                                    id="numeroalturaReferencia"></b>
+                            </div>
+                           
+                        </div>
+                        <div class="recuadro-tres">
+                            <div class="paso-3">3</div>
+                            <div>
+                                A <span class="igual">=</span><b><input type="text" name="" id="resultado" size="1"
+                                        id=""></b>cm<sup>2</sup><b></3>
+                                    <div class="respuesta">
+
+                                    </div>
+                            </div>
+                            <div onclick="comprobarEjericioPrueba()" style="cursor:pointer">
+                                <img src="./assets/img/btnComprobar.svg" class="responsive-comprobar" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="siguienteBtn">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="slider3">
+                    <div style="float:left;">
+                        <img src="./assets/img/TituloP.png" class="responsive" alt="">
+                    </div>
+                    <div class="contenedor-actividad-final">
+                        <div id="contendor-opcones-actividad-final">
+                            <div class="parte-inicial">
+                                <div>
+                                    A <span class="igual">=</span><span id="resultado-marcador"></span>cm<sup>2</sup>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    A
+                                </div>
+                                <div>
+                                    <span class="igual">=</span>
+                                </div>
+                                <div>
+                                    <input type="text" name="" id="resultadoBaseAFinal" onfocus="this.value=''"
+                                        value="?" size="1" id="">
+                                    base
+                                </div>
+                                <div>
+                                    *
+                                </div>
+                                <div>
+                                    <input type="text" name="" id="resultadoAlturaAFinal" onfocus="this.value=''"
+                                        value="?" size="1" id="">
+                                    altura
+                                </div>
+                                <div id="respuesta-actividad-final">
+
+                                </div>
+                            </div>
+                            <div class="btn-comprobar" onclick="comprobarEjericioPruebaFinal()" style="cursor:pointer">
+                                <img src="./assets/img/btnComprobar.svg" class="responsive-comprobar " alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="actividad-final">
+                                <div class="contenedor-ejercicio-example">
+                                    <div onclick="nuevoEjercicioFinal()" style="cursor:pointer">
+                                        <img src="./assets/img/btnNuevoEjercicio.png" alt="">
+                                    </div>
+                                    <div class="contendor-figura-cadricula">
+                                        <div>
+                                            <b>h</b>
+                                        </div>
+                                        <div class="contenedor-padre-cuadricula">
+                                            <div class="contenedor-cuadricula-final">
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <b>b</b>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="./src/sounds.js"></script>
+    <script type="text/javascript" src="./src/presentacion.js"></script>
+    <script type="text/javascript" src="./src/cuadricula.js"></script>
+</body>
+
+</html>
