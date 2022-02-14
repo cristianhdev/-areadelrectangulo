@@ -143,11 +143,11 @@ span.igual-white {
   align-content: center;
 }
 
-#slider3{
+#slider3 {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  height: 88vh;
+  height: 70vh;
   align-items: center;
   width: 100%;
   align-content: center;
@@ -265,7 +265,7 @@ span.igual-white {
   padding: 17px;
   margin: 7px;
   transform: scaleY(-1);
- 
+
 }
 
 
@@ -365,37 +365,37 @@ span.igual-white {
 .btn-comprobar {
   width: 60%;
   margin: 0px auto;
-  text-align: center; 
+  text-align: center;
 }
 
-.contenedor-titulo{
+.contenedor-titulo {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   align-content: center;
-  place-content:center
+  place-content: center
 }
 
-.tituloP1{
+.tituloP1 {
   width: 100%;
-  height:15vh;
+  height: 15vh;
   background-image: url(./assets/img/TituloP.png);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.tituloP2{
+.tituloP2 {
   width: 100%;
-  height:15vh;
+  height: 15vh;
   background-image: url(./assets/img/TituloP2.png);
   background-size: 100%;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.texto-tituloP2{
+.texto-tituloP2 {
   width: 64%;
   position: relative;
   left: 50%;
@@ -429,7 +429,7 @@ span.igual-white {
 
 
 .contendor-figura-cadricula {
-  
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -481,7 +481,7 @@ span.igual-white {
   place-items: center;
   align-content: center;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-gap:4px
+  grid-gap: 4px
 }
 
 input[type="text"] {
@@ -504,7 +504,7 @@ h6 {
   text-shadow: 2px 2px 6px #ad612a;
 }
 
-.contenedor-padre-cuadricula{
+.contenedor-padre-cuadricula {
   background-image: url(./assets/img/recta.png);
   background-size: 92% 95%;
   background-repeat: no-repeat;
@@ -638,7 +638,7 @@ h6 {
   .contenido-actividad-bienvenida {
     margin-top: 20%;
     height: 99%;
-    overflow:scroll
+    overflow: scroll
   }
 
   .recuadro-uno,
@@ -672,10 +672,10 @@ h6 {
 
   .contenedor-titulo {
     grid-template-columns: 1fr;
-    margin-top:100%
+    margin-top: 100%
   }
 
-  .siguienteBtn{
+  .siguienteBtn {
     width: 15vh;
   }
 
@@ -687,4 +687,8 @@ h6 {
     background-size: 100% 100%;
   }
 
+
+  #slider3 {
+    height: 88vh;
+  }
 }
