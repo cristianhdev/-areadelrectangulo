@@ -147,7 +147,7 @@ span.igual-white {
   display: none;
   flex-direction: column;
   justify-content: space-around;
-  height: 70vh;
+  height: 88vh;
   align-items: center;
   width: 100%;
   align-content: center;
@@ -510,6 +510,7 @@ h6 {
   background-repeat: no-repeat;
   background-position: 1px 11px
 }
+
 
 .button {
   width: 100%;
