@@ -4,11 +4,12 @@ let audioOvers = null;
 let audioOverOut = null;
 let presentacionActividad;
 let actividadesCuadricuala = [
-    { base: 2, altura: 5 },
+    { base: 6, altura: 3 },
     { base: 3, altura: 2 },
+    { base: 4, altura: 3 },
     { base: 2, altura: 3 },
-    { base: 3, altura: 3 },
-    { base: 2, altura: 6 }
+    { base: 5, altura: 3 }
+    
 ]
 let alturaIncognita;
 let baseEjercicio;
@@ -43,15 +44,20 @@ function init() {
 function resaltarCuadros(idInputAltura,idInputBase){
     let h = document.querySelector(idInputAltura).value
     let b = document.querySelector(idInputBase).value
-    if(b=='?'){
-        document.querySelector(idInputBase).style.border='1px solid red'
+    if(b<=6){
+        if(b=='?'){
+            document.querySelector(idInputBase).style.border='1px solid red'
+        }else{
+            let cuadriculaDibujo = { base: b, altura: h }
+            cuaricula_actividad.pintarCuadricula(cuadriculaDibujo)
+            document.querySelector(idInputBase).style.border='initial'
+            document.querySelector('#numerobaseReferencia').value=b
+            document.querySelector('#numeroalturaReferencia').value=h
+        }
     }else{
-        let cuadriculaDibujo = { base: b, altura: h }
-        cuaricula_actividad.pintarCuadricula(cuadriculaDibujo)
-        document.querySelector(idInputBase).style.border='initial'
-        document.querySelector('#numerobaseReferencia').value=b
-        document.querySelector('#numeroalturaReferencia').value=h
+        document.querySelector(idInputBase).style.border='1px solid red'
     }
+   
   
    
 }
@@ -153,7 +159,7 @@ function cargarActividadFinal(){
         { base: 4, altura: 3 },
         { base: 5, altura: 5 },
         { base: 5, altura: 3 },
-        { base: 8, altura: 5 },
+        { base: 5, altura: 8 },
     ]
     posicionInicialJuegoCuadricula=0
     cuaricula_actividad= new cuadricula(5,8,'.contenedor-cuadricula-final')
@@ -175,11 +181,11 @@ function nuevoEjercicioFinal() {
     if (posicionInicialJuegoCuadricula != actividadesCuadricuala.length - 1) {
         posicionInicialJuegoCuadricula++
         cuaricula_actividad.pintarCuadricula(actividadesCuadricuala[posicionInicialJuegoCuadricula])
-        console.log(actividadesCuadricuala[posicionInicialJuegoCuadricula])
+        
     } else {
         posicionInicialJuegoCuadricula = 0
         cuaricula_actividad.pintarCuadricula(actividadesCuadricuala[posicionInicialJuegoCuadricula])
-        console.log(actividadesCuadricuala[posicionInicialJuegoCuadricula])
+        
     }
 
     document.querySelector('#resultado-marcador').innerHTML = actividadesCuadricuala[posicionInicialJuegoCuadricula].base *actividadesCuadricuala[posicionInicialJuegoCuadricula].altura

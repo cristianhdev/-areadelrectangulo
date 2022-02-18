@@ -52,13 +52,15 @@ class cuadricula{
     pintarCuadricula({ base: a, altura: h }) {
         alturaIncognita = h
         baseEjercicio = a
+        
     
         let numeros = 1
-        let col = a;
-        let row = h;
+        let col = h;
+        let row = a;
         this.removerCuadriculaSeleccionada()
         for (let j = 0; j < col; j++) {
             for (let i = 0; i < row; i++) {
+                
                 this.tablero[j][i].classList.add("figura-cuadricula-resaltado")
                 numeros++
             }
